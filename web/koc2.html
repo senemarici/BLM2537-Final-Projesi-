@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Burç Yorumları</title>
+    <style>
+        body {
+            background-color: #EDEDFF; 
+            color: #000000; 
+            font-family: 'Arial', sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #EDEDFF; /* Navbar arkaplan rengi */
+            padding: 50px;
+            text-align: left;
+        }
+
+        .nav_logo a {
+            color: #fff; /* Navbar metin rengi*/
+            text-decoration: none;
+            font-size: 50px;
+        }
+
+        .nav_links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            gap: 0px;
+        }
+
+        .link {
+            color: #ffffff; /* Bağlantı metin rengi */
+            text-decoration: none;
+            font-size: 35px;
+        }
+
+        .burc_container {
+            background-color: #EDEDFF; /* Burç kartlarının arkaplan rengi */
+            padding: 20px;
+        }
+
+        .section_container {
+            background-image: url('images/fluid.jpg'); /* Arkaplan fotoğrafını belirleme */
+            background-size: cover; /* Arkaplan fotoğrafını sığdır */
+            background-position: center; /* Arkaplan fotoğrafını ortala */
+            color: #200036; /* Yazı rengini ayarla */
+            text-align: center;
+            padding: 50px 0; /* İçerik etrafında boşluk bırak */
+        }
+
+        .section_title {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .section_subtitle {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .header_container {
+            text-align: center;
+        }
+
+        .header_container h1 {
+            font-size: 36px; /* Başlık boyutu ayarla */
+        }
+
+        .header_container p {
+            font-size: 18px;
+        }
+
+        .burc_grid {
+            display: flex;
+            flex-wrap: wrap; /* Kartlar sığmazsa alt satıra geç */
+            gap: 20px;
+            justify-content: space-around; /* Kartları yatayda ortalama */
+        }
+
+        .burc_cards {
+            flex-basis: calc(25% - 20px); /* Kartların genişliği (4 sütun için %25, aralarındaki boşlukları çıkar) */
+            max-width: calc(25% - 20px); /* Kartların maksimum genişliği */
+            border: 0px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box; 
+        }
+
+        .burc_cards img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .burc_name span {
+            font-family:'Playfair Display', serif;
+            font-size: 18px; /* Kart içindeki metin boyutu */
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .footer_container {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social_icons {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .social_icons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        #gecisKutusu {
+            width: 700px;
+            height: 1150px;
+            border: 5px solid #95879E;
+            border-radius: 15px;
+            padding: 10px;
+            margin: auto;
+           /*background-color: #dbc2e2;*/
+        }
+
+        button {
+            background-color: #752991; /* Yeşil renk */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Butonun üzerine gelindiğinde stil değiştirme */
+        button:hover {
+            background-color: #b665cd; /* Koyu yeşil renk */
+        }
+
+        .celebrities_container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        }
+
+        .celebrity {
+            text-align: center;
+        }
+
+        .celebrity img {
+            width: 150px;
+            height: 200px;
+            border-radius: 50%; /* Yuvarlak fotoğraf kenarı için */
+        }
+
+        .celebrity p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <img src="images/logoo.png"  alt="logo" height="100px" width="200">
+        </div>
+        <ul class="nav_links">
+            <li class="link">
+                <a href="site.html">
+                    <img src="images/anasayfa.png" alt="Anasayfa" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="hakkimizda.html">
+                    <img src="images/hakkımızda.png" alt="Hakkımızda" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="iletisim.html">
+                    <img src="images/iletisim.png" alt="İletişim" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="duyurular.html">
+                    <img src="images/duyurular.png" alt="İletişim" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="sikayet-ve-oneriler.html">
+                    <img src="images/sikayet.png" alt="Şikayet ve Öneriler" width="200px" height="80px">
+                </a>
+            </li>
+        </ul>
+        
+    </nav>
+    <header>
+        <div class="section_container">
+            <div class="header_container">
+                <h1>Koç Burcu Yorumlarınız </h1>
+                <p>
+                    Koç Burcu İçin Günlük, Haftalık ve Aylık Burç Yorumlarınız Hazır!
+                </p>
+            </div>
+        </div>
+        
+        <div class="burc_container">
+            <div class="section_container">
+                <div id="gecisKutusu"><h3>KOÇ BURCU KENDİNİ DİNLEMEYE HAZIR MISIN?</h3>
+                    
+
+                    Ateş Grubunun haylaz çocuğu... (21 Mart-20 Nisan)<p></p>
+                    
+                    Yıldızın: Mars<p></p>
+                    Grubun: Ateş, Pozitif<p></p>
+                    Niteliği: Öncü <p></p>
+                    Burcunun cinsiyeti: Eril<p></p>
+                    Yeteneğin: Canlılık ve hareket<p></p>
+                    Seni sen yapan: Yeni girişimler, cesaret, atılganlık<p></p>
+                    Hedeflerin: Öncülük, liderlik, yol göstericilik, yenilikçilik<p></p>
+                    Sonuç: Başarı ve zafer<p></p>
+                    Bastırman gereken huyun: Kesinlikle sabırsızlık, çabuk sinirlenmek <p></p>
+                    Şanslı günün: Salı<p></p>
+                    Şanslı sayıların: 7, 47, 87<p></p>
+                    Şans getiren taşın: <p></p>
+                    Şans getiren rengin: Narçiçeği, Ateş kırmızısı ve kırmızının her tonu <p></p>
+                    Sevdiğin Çiçekler: Sardunya, limon  çiçeği, manolya, lavanta çiçeği<p></p>
+                    Bitkilerin: Lale, Gelincik, Nar çiçeği, papatya <p></p>
+                    Müzik tarzın: Hızlı tempolu parçalar ve marşlar<p></p>
+                    Vücutta temsil ettiğin bölgeler: Baş bölgesi ve yüzü temsil eder.<p></p>
+                    Mevsimin: İlkbahar <p></p>
+                    Olası Hastalıkların: Migren, yüze alınan darbeler, baş ağrısı, diş ağrısı, yüksek ateş, adele rahatsızlıkları, yüksek tansiyon, beyin iltihabı…<p></p>
+                    Sağlına yararlı besinler: Pancar, marul, salatalık, ceviz, elma, limon, balık süt ve süt ürünleri<p></p>
+                    Uzak durulması gereken besinler: Mayonez, soslar, makarna, kızartma ve yağlı yiyecekler<p></p>
+                    Uyumlu Burç: Aslan ve Yay<p></p>
+                    Karşıt Burcun: Terazi<p></p>
+                    Başarılı olacağın meslekler: Politika, organizatörlük, yöneticilik, endüstri, mühendislik, işletmecilik, komutanlık, kimyacı, operatör, demir ve çelik işleri, makine, mizah ve fıkra yazarlığı, eleştirmenlik, ressamlık, müzik, konfeksiyonculuk.<p></p>
+                    Olumlu özelliklerin: Pratik, lider ruhlu, bulunduğu ortamlarda rahatça sosyalleşen, cazibeli<p></p>
+                    Olumsuz özelliklerin: Öfkeli, patavatsız, kıskanç, sabırsız<p></p>
+                    Burcunun Yönettiği ülkeler:  İngiltere, Filistin, Danimarka, Almanya, Japonya, İsveç, Suriye<p></p>
+                    Burcunun Yönettiği şehirler: Berlin, Birmingham, Saragossa, Nepal  
+                </div>
+
+                <button onclick="gecisYap(`
+                 Ateş Grubunun haylaz çocuğu... (21 Mart-20 Nisan)<p></p>
+                    
+                    Yıldızın: Mars<p></p>
+                    Grubun: Ateş, Pozitif<p></p>
+                    Niteliği: Öncü <p></p>
+                    Burcunun cinsiyeti: Eril<p></p>
+                    Yeteneğin: Canlılık ve hareket<p></p>
+                    Seni sen yapan: Yeni girişimler, cesaret, atılganlık<p></p>
+                    Hedeflerin: Öncülük, liderlik, yol göstericilik, yenilikçilik<p></p>
+                    Sonuç: Başarı ve zafer<p></p>
+                    Bastırman gereken huyun: Kesinlikle sabırsızlık, çabuk sinirlenmek <p></p>
+                    Şanslı günün: Salı<p></p>
+                    Şanslı sayıların: 7, 47, 87<p></p>
+                    Şans getiren taşın: <p></p>
+                    Şans getiren rengin: Narçiçeği, Ateş kırmızısı ve kırmızının her tonu <p></p>
+                    Sevdiğin Çiçekler: Sardunya, limon  çiçeği, manolya, lavanta çiçeği<p></p>
+                    Bitkilerin: Lale, Gelincik, Nar çiçeği, papatya <p></p>
+                    Müzik tarzın: Hızlı tempolu parçalar ve marşlar<p></p>
+                    Vücutta temsil ettiğin bölgeler: Baş bölgesi ve yüzü temsil eder.<p></p>
+                    Mevsimin: İlkbahar <p></p>
+                    Olası Hastalıkların: Migren, yüze alınan darbeler, baş ağrısı, diş ağrısı, yüksek ateş, adele rahatsızlıkları, yüksek tansiyon, beyin iltihabı…<p></p>
+                    Sağlına yararlı besinler: Pancar, marul, salatalık, ceviz, elma, limon, balık süt ve süt ürünleri<p></p>
+                    Uzak durulması gereken besinler: Mayonez, soslar, makarna, kızartma ve yağlı yiyecekler<p></p>
+                    Uyumlu Burç: Aslan ve Yay<p></p>
+                    Karşıt Burcun: Terazi<p></p>
+                    Başarılı olacağın meslekler: Politika, organizatörlük, yöneticilik, endüstri, mühendislik, işletmecilik, komutanlık, kimyacı, operatör, demir ve çelik işleri, makine, mizah ve fıkra yazarlığı, eleştirmenlik, ressamlık, müzik, konfeksiyonculuk.<p></p>
+                    Olumlu özelliklerin: Pratik, lider ruhlu, bulunduğu ortamlarda rahatça sosyalleşen, cazibeli<p></p>
+                    Olumsuz özelliklerin: Öfkeli, patavatsız, kıskanç, sabırsız<p></p>
+                    Burcunun Yönettiği ülkeler:  İngiltere, Filistin, Danimarka, Almanya, Japonya, İsveç, Suriye<p></p>
+                    Burcunun Yönettiği şehirler: Berlin, Birmingham, Saragossa, Nepal  
+                `)">Koç Burcu</button>
+
+                <button onclick="gecisYap(`<h2>
+                    Günün Ruh Hali: Sevdiklerine Vakit Ayırıyorsun<p>
+                    <p>Yüksek enerjin ve kararlılığın ile güne başlayabilirsin. <p>
+                    Özel sektörde çalışan bir Koç burcuysan, iş projelerini hızlandırmak ve liderlik becerilerini kullanmak için uygun bir gün. <p>
+                    Akşam saatlerinde sevdiklerinle keyifli anlar yaşayabilirsin, sosyalleşmeyi önemsiyorsun. <p>
+                    Kış tatili yapmayanlardansan, bir seyahat organizasyonu yapmak isteyebilirsin.<p> </h2>
+                `)">Günlük Yorum</button>
+
+                <button onclick="gecisYap(` 
+                    Sevgili Koç ve Yükselen Koçlar <p>
+                    Ocak ayı pek çok değişim ve yenilikle 2024’e giriş yapmanızı sağlayacak.<p> İlk on beş gün içinde  kariyer, iş hayatınızda değişimler, krizsel konular ve sorunlarla karşılaşmanız olasıdır.<p> Ancak maddi konularda ise krizsel durumlardan güçlenerek çıkacaksınız ve harika gelişmeler için adım atabilirsiniz.<p>
+                    Ocak ayının ikinci yarısında ise; Plüton kova etkisi başlıyor olacak. <p>
+                    Ocak ayı değişimlerin tetiklendiği önemli kadersel temaların kendini gösterdiği bir ay olacak. <p>Şans ve mutluluk diliyorum.<p> </h2> <p>Böylece iş hayatınızda ve sosyal çevrenizle ilgili güç kazanacağınız 20 senelik bir döneme başlıyor olacaksınız.<p> Artık gücü doğru kullanmaya odaklanacaksınız ve teklifler, destekler kendiliğinden gelmeye başlayacak.<p> Ayrıca aşk, tatil, çocuk, hobi alanlarında ise güzel gelişmeler gerçekleşebilir. <p>Ancak harcamalarınız çok artabilir. Ayrıca borsada dikkat etmeniz tavsiyedir.<p>
+                `)">Aylık Yorum</button>
+                <button onclick="gecisYap(`
+                <p>
+                    2024 yılı Koç burcu için oldukça dinamik ve heyecan verici olabilir. <p>
+                    Aşk ve kariyer alanlarında birçok fırsat ve meydan okuma sizi bekliyor olacak.<p>
+                    <h3> <b> Koç Burcu 2024 Yılı Aşk Yorumu </b> <p></h3>
+                    2024 yılında Koç burçları için aşk hayatı oldukça hareketli geçebilir.<p>
+                    Yeni insanlarla tanışma ve yeni ilişkilere adım atma konusunda oldukça şanslı olacaksınız.<p>
+                    İlişkilerinizde dürüstlük ve açık iletişim ön planda olmalı. <p>
+                    Yılın ilk yarısında, özellikle bahar aylarında, romantizm ve tutku yüksek olacak. <p>
+                    Ancak, ilişkilerde aceleci davranmaktan kaçınmalı, sabırlı ve anlayışlı olmalısınız. <p>
+                    Yılın ikinci yarısında ise, var olan ilişkilerinizde derinleşme ve ciddiyet söz konusu olabilir. <p>
+                    <h3> <b> Koç Burcu 2024 Yılı Kariyer Yorumu  </b> <p> </h3>
+                    Kariyer açısından 2024, Koç burçları için oldukça verimli bir yıl olacak.<p>
+                    Yaratıcılığınızı ve liderlik yeteneklerinizi ön plana çıkaracak projelerde yer alabilirsiniz.<p>
+                    Özellikle yılın ilk çeyreğinde, kariyerinizde önemli adımlar atma ve yeni fırsatlar yakalama şansınız yüksek. <p>
+                    Risk almaktan korkmayın, ancak her adımınızı dikkatli bir şekilde planlayın. Yılın ortasına doğru, iş hayatınızda bazı zorluklarla karşılaşabilirsiniz. <p>
+                    Bu dönemde, sabır ve kararlılık göstererek zorlukların üstesinden gelebilirsiniz. Yıl sonuna doğru ise, kariyerinizde istikrarlı bir büyüme ve başarı elde edebilirsiniz.<p>
+                    Genel olarak, 2024 yılı Koç burçları için hem aşkta hem de kariyerde cesur adımlar atabilecekleri, kendilerini ifade edebilecekleri ve başarıya ulaşabilecekleri bir yıl olacak.<p>
+                    Önemli olan, dengeli bir yaklaşım sergilemek ve her iki alanda da sabırlı olmak. <p> 
+                `)">Yıllık Yorum</button>
+
+            
+                <script>
+                    function gecisYap(yeniMetin) {
+                        document.getElementById('gecisKutusu').innerHTML = yeniMetin;
+                    }
+                </script>
+            
+            </div>
+
+        </div>
+        <div class="celebrities_container">
+            <div class="celebrity">
+                <img src="images/celebrity1.jpg" alt="lady gaga">
+                <p>Lady gaga</p>
+            </div>
+        
+            <div class="celebrity">
+                <img src="images/celebrity2.jpg" alt="robert downey jr.">
+                <p>Robert Downey Jr.</p>
+            </div>
+
+            <div class="celebrity">
+                <img src="images/celebrity3.jpg" alt="ezgi mola">
+                <p>Ezgi Mola</p>
+            </div>
+
+            <div class="celebrity">
+                <img src="images/celebrity4.jpg" alt="şebnem ferah">
+                <p>Şebnem Ferah</p>
+            </div>
+
+            <div class="celebrity">
+                <img src="images/celebrity5.jpg" alt="Erol evgin">
+                <p>Erol Evgin</p>
+            </div>
+
+            <div class="celebrity">
+                <img src="images/celebrity6.jpg" alt="Emma Watson">
+                <p>Emma Watson</p>
+            </div>
+        
+            
+        
+        </div>
+
+        <div class="footer_container">
+            <h2>Biz Kimiz</h2>
+            <div class="social_icons">
+                <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

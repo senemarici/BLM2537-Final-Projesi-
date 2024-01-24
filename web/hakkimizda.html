@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Burç Yorumları</title>
+    <style>
+        body {
+            background-color: #EDEDFF; 
+            color: #000000; 
+            font-family: 'Arial', sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #EDEDFF; /* Navbar arkaplan rengi */
+            padding: 50px;
+            text-align: left;
+        }
+
+        .nav_logo a {
+            color: #fff; /* Navbar metin rengi*/
+            text-decoration: none;
+            font-size: 50px;
+        }
+
+        .nav_links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            gap: 0px;
+        }
+
+        .link {
+            color: #ffffff; /* Bağlantı metin rengi */
+            text-decoration: none;
+            font-size: 35px;
+        }
+
+        .burc_container {
+            background-color: #EDEDFF; /* Burç kartlarının arkaplan rengi */
+            padding: 20px;
+        }
+
+        .section_container {
+            background-image: url('images/fluid.jpg'); /* Arkaplan fotoğrafını belirleme */
+            background-size: cover; /* Arkaplan fotoğrafını sığdır */
+            background-position: center; /* Arkaplan fotoğrafını ortala */
+            color: #200036; /* Yazı rengini ayarla */
+            text-align: center;
+            padding: 50px 0; /* İçerik etrafında boşluk bırak */
+        }
+
+        .section_title {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .section_subtitle {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .header_container {
+            text-align: center;
+        }
+
+        .header_container h1 {
+            font-size: 36px; /* Başlık boyutu ayarla */
+        }
+
+        .header_container p {
+            font-size: 18px;
+        }
+
+        .burc_grid {
+            display: flex;
+            flex-wrap: wrap; /* Kartlar sığmazsa alt satıra geç */
+            gap: 20px;
+            justify-content: space-around; /* Kartları yatayda ortalama */
+        }
+
+        .burc_cards {
+            flex-basis: calc(25% - 20px); /* Kartların genişliği (4 sütun için %25, aralarındaki boşlukları çıkar) */
+            max-width: calc(25% - 20px); /* Kartların maksimum genişliği */
+            border: 0px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box; 
+        }
+
+        .burc_cards img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .burc_name span {
+            font-family:'Playfair Display', serif;
+            font-size: 18px; /* Kart içindeki metin boyutu */
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .footer_container {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social_icons {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .social_icons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .hakkimizdaContainer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <img src="images/logoo.png"  alt="logo" height="100px" width="200">
+        </div>
+        <ul class="nav_links">
+            <li class="link">
+                <a href="site.html">
+                    <img src="images/anasayfa.png" alt="Anasayfa" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="hakkimizda.html">
+                    <img src="images/hakkımızda.png" alt="Hakkımızda" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="iletisim.html">
+                    <img src="images/iletisim.png" alt="İletişim" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="duyurular.html">
+                    <img src="images/duyurular.png" alt="İletişim" width="200px" height="80px">
+                </a>
+            </li>
+            <li class="link">
+                <a href="sikayet-ve-oneriler.html">
+                    <img src="images/sikayet.png" alt="Şikayet ve Öneriler" width="200px" height="80px">
+                </a>
+            </li>
+        </ul>
+        
+    </nav>
+    <header>
+        <div class="section_container">
+            <div class="header_container">
+                <h1>Günlük,Haftalık,Aylık Burç Yorumları </h1>
+                <p>
+                    Günlük, haftalık ve aylık burç yorumlarına ulaşmak için hemen burcunu seç!
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <div class="burc_container">
+        <div class="section_container">
+            <h2 class="section_title">Burçlar Hakkında Her Şey</h2>
+            <p class="section_subtitle">Günlük,Haftalık,Aylık Burç Yorumlarınız</p>
+            <div class="burc_grid">
+                <div class="burc_cards">
+                    <a href="koc2.html">
+                        <img src="images/koc.png" alt="koç burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Koç Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="boga.html">
+                        <img src="images/boga.png" alt="boga burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Boğa Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="ikizler.html"></a>
+                        <img src="images/ikizler.png" alt="ikizler burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>İkizler Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="yengec.html"></a>
+                        <img src="images/yengec.png" alt="yengec burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Yengeç Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="aslan.html">
+                        <img src="images/aslan.png" alt="aslan burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Aslan Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="basak.html">
+                        <img src="images/basak.png" alt="basak burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Başak Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="terazi.html">
+                        <img src="images/terazi.png" alt="terazi burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Terazi Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="akrep.html">
+                        <img src="images/akrep.png" alt="akrep burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Akrep Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="yay.html">
+                        <img src="images/yay.png" alt="yay burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Yay Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="oglak.html">
+                        <img src="images/oglak.png" alt="oglak burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Oğlak Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="kova.html">
+                        <img src="images/kova.png" alt="kova burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Kova Burcu yorumları</span>
+                    </div>
+                </div>
+                <div class="burc_cards">
+                    <a href="balik.html">
+                        <img src="images/balık.png" alt="balık burcu">
+                    </a>
+                    <div class="burc_name">
+                        <span>Balık Burcu yorumları</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="gotoHakkimizda()">Hakkımızda</button>
+
+    <div id="hakkimizdaContainer">
+        <!-- Hakkımızda içeriği -->
+    </div>
+
+    <script>
+        function gotoHakkimizda() {
+            var hakkimizdaContainer = document.getElementById('hakkimizdaContainer');
+            var footerContainer = document.querySelector('.footer_container');
+
+            if (hakkimizdaContainer.style.display === 'none') {
+                hakkimizdaContainer.style.display = 'block';
+
+                // Footer kısmına animasyonlu olarak kaydırma
+                var targetPosition = footerContainer.offsetTop;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+    
+
+    <div class="footer_container">
+        <h2>Biz Kimiz</h2>
+        <div class="social_icons">
+            <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+</body>
+</html>
